@@ -7,10 +7,9 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 */
 module.exports = new FacebookStrategy(
     {
-        /* glgl's profile */
         clientID: '[facebook app ID]',
-        clientSecret: '[facebook app secret]'
-        callbackURL: 'http://localhost:3000/login'
+        clientSecret: '[facebook app secret]',
+        callbackURL: 'http://example.com:3000/fbcallback'
     },
     function(accessToken, refreshToken, profile, done) {
         var options = {
